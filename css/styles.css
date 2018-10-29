@@ -1,11 +1,41 @@
 /* MOBILE AND GLOBAL STYLES */
 
-/* applies to screens smaller than 500px (first breakpoint) */
+/* applies to !!(all)!! screens --smaller than 500px-- (first breakpoint) */
 /* and above unless overwritten below */
 
 body {
   background: #fcc;
-} 
+}
+.menu {
+  background-color: black;
+  color: white;
+  line-height: 2em;
+}
+
+.menu-toggle {
+  display: flex;
+  justify-content: center;
+  background: #333;
+}
+nav a {
+  padding: 1.25em 1.5em;
+  color: #ccc;
+  background: #555;
+  text-decoration: none;
+  transition: all 1.5s;
+}
+nav a:hover {
+  color: #dfd;
+  background: #797;
+}
+
+/*.menu:hover + nav, nav:hover {
+  display: flex;
+}*/
+
+nav {
+  display: none;
+}
 
 
 
@@ -14,10 +44,17 @@ body {
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
+  nav {
+    display: flex;
+
+  }
+  .menu {
+    display: none;
+  }
 }
 
 
@@ -30,5 +67,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
